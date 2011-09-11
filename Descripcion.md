@@ -59,10 +59,13 @@ sistemas.
 ## Referencias
 
 * **[1]**: Callan, J. *Advances in Information Retrieval: Distributed Information Retrieval*. Springer, 2006.
+
   DOI: http://dx.doi.org/10.1007/0-306-47019-5_5
 
 * **[2]**: Bergmark, D.; Phempoonpanich, P.; Zhao, S. *Scraping the ACM Digital Library*. ACM SIGIR Forum 35, 2001.
+
   DOI: http://dx.doi.org/10.1145/511144.511146
   
 * **[3]**: Beno, M.; Misek, J.; Zavoral, F.; *AgentMat: Framework for data scraping and semantization*. IEEE RCIS, 2009.
-  DOIL http://dx.doi.org/10.1109/RCIS.2009.5089286
+
+  DOI: http://dx.doi.org/10.1109/RCIS.2009.5089286
