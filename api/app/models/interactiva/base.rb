@@ -1,7 +1,8 @@
 class InvalidCourseException < StandardError; end
 
 class Interactiva::Base
-  BASE_URL = "http://interactiva.eafit.edu.co/ei/"
+  DOMAIN = "http://interactiva.eafit.edu.co"
+  BASE_URL = DOMAIN + "/ei/"
   
   # Logs in to Interactive and returns the Mechanize agent or nil if couldn't log in.
   def self.login!(username, password)
