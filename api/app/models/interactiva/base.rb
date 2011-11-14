@@ -1,3 +1,5 @@
+class InvalidCourseException < StandardError; end
+
 class Interactiva::Base
   BASE_URL = "http://interactiva.eafit.edu.co/ei/"
   
