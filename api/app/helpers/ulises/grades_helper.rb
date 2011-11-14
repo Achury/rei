@@ -1,0 +1,2 @@
+module Ulises::GradesHelper
+end
