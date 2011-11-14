@@ -207,3 +207,72 @@ Messages
         "body": "<br><p>buenos días a todos,</p>\n<p>url de notas: https://docs.google.com/spreadsheet/ccc?key=0Av4oKjh0Qca5dHQ5ZUZ4T1BBRzNDVndYUlZOYTc4d2c&amp;hl=es&amp;pli=1#gid=0</p>\n<p>se confirma los porcentajes programados:</p>\n<p>parcial1 - 15%</p>\n<p>parcial2 - 15%</p>\n<p>seguimiento - 40%</p>\n<p>el seguimiento se discrimina así: 5 retos (c/uno de 6%) y los foros 10% (se promedian).</p>\n<p>Para darles chance que terminen bien el reto5, les coloque una nota promedio de 3.0 a todos, y tendrían HASTA ESTE LUNES FESTIVO EN LA TARDE, PARA SUBIR EL RETO 05 funcionando, y dependiendo de la evaluación, se ratifica esta nota, se sube o baja, y procedería a modificarla.</p>\n<p>Espero que este alargue les de chance de obtener una buena nota en este reto...</p>\n<p>    Edwin Montoya</p>\r\n      <br><br>"
       }
     ]
+
+Resources
+----------
+
+### Show
+
+**Sample request:**
+
+`curl localhost:3000/ei/resources/st0263`
+
+**Sample response:**
+
+    [
+      {
+        "title": "archivos para examen parcial",
+        "description": "archivos base para simulación de fuentes de datos.",
+        "content": [
+          {
+            "text": "archivos-examen-parcial-2011-2.zip",
+            "url": "/ei/adjuntos/descargar.do?id=2519181"
+          }
+        ],
+        "leaf": true
+      },
+      {
+        "title": "Actividades de Aprendizaje",
+        "leaf": false,
+        "content": [
+          {
+            "title": "Laboratorio de MPI",
+            "description": "Laboratorio de MPI donde se explica el funcionamiento del cluster MPI, compilación, ejecución, estructura general de un programa y tipos para el reto.",
+            "content": [
+              {
+                "text": "labmpi.pdf",
+                "url": "/ei/adjuntos/descargar.do?id=2502953"
+              }
+            ],
+            "leaf": true
+          },
+          {
+            "title": "Reto No 4 - Chat en Web y WS",
+            "description": "Implementación de un cliente Web y comunicaciones Web Service, para integrar las funcionalidades implementadas en el reto 01.",
+            "content": [
+              {
+                "text": "reto4-chatwebws.pdf",
+                "url": "/ei/adjuntos/descargar.do?id=2500309"
+              }
+            ],
+            "leaf": true
+          }
+        ]
+      },
+      {
+        "title": "Información del curso",
+        "leaf": false,
+        "content": [
+          {
+            "title": "Programa de la materia",
+            "content": [
+              {
+                "text": "st0263-2011-2-031-programa.pdf",
+                "url": "/ei/adjuntos/descargar.do?id=2356258"
+              }
+            ],
+            "leaf": true
+          }
+        ]
+      }
+    ]

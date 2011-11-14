@@ -7,5 +7,6 @@ Api::Application.routes.draw do
   namespace :ei do
     resources :homework
     resources :messages
+    resources :resources
   end
 end

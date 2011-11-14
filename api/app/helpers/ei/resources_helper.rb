@@ -1,0 +1,2 @@
+module Ei::ResourcesHelper
+end
