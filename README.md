@@ -3,8 +3,8 @@ Completed
 * Horario
 * Notas
 * Entregas de trabajo
+* Contenidos subidos a EAFIT Interactiva
+* Mensajes enviados por el profesor
 
 Pending
 ---------
-* Mensajes enviados por el profesor
-* Contenidos subidos a EAFIT Interactiva
