@@ -141,6 +141,11 @@ table tr.error {
   background-color: #f8f8f8;
 }
 
+.light {
+  background-color: #f8f8f8;
+  border: 1px solid #999999;
+}
+
 tt {
   font-size: 1.2em;
 }

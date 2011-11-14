@@ -1,0 +1,19 @@
+<ul>
+  <% resources.each do |resource| %>
+    <li class="resource">
+      <span class="title"><b><%= resource["title"] %>:</b></span>
+      <span class="description"><%= resource["description"] %></span>
+      <% if resource["leaf"] %>
+        <div class="links">
+          <% resource["content"].each do |content| %>
+            <%= link_to content["text"], content["url"] %>
+          <% end %>
+        </div>
+      <% else %>
+        <div style="margin-left: 10px">
+          <%= render :partial => "resources", :locals => { :resources => resource["content"] } %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
