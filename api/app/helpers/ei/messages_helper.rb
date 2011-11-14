@@ -1,0 +1,2 @@
+module Ei::MessagesHelper
+end

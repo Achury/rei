@@ -158,19 +158,52 @@ Homework
 
 ### Show
 
+**Sample request:**
+
+`curl localhost:3000/ei/homework/st0263`
+
+**Sample response:**
+
     [
       {
-        "title": "Reto 1 - 20112 - Segmentos de línea",
-        "start_date": "2011/07/27 05:00 PM",
-        "end_date": "2011/08/02 11:59 PM",
+        "title": "Examen Parcial 2 - practico (2011-2)",
+        "start_date": "2011/10/27 02:30 PM",
+        "end_date": "2011/10/27 11:59 PM",
         "status": "Closed",
-        "description": "<p>Grupos de 1 o 2 personas:</p>\n<p>- Implmentar los algoritmos de Bresenham y uno intiutivo (con variables de punto flotante) y dibujar las líneas, dentro de un cuadrado, que circunscriben un círculo.</p>\n<p>Grupos de 3 personas:</p>\n<p>- Implementar, adicionalmente, la ecuación de segmento de recta.</p>\n<p>Entregar:</p>\n<p>1. Archivo texto con los tiempos que toma dibujar 10,000 líneas con cada algoritmo</p>\n<p>2. El código fuente de los algoritmos implementados (solamente el archivo .c o .cpp)</p>\n<p>3. Un pantallazo.</p>\n<p>Meter todo a un archivo .zip o .rar y ponerle el nombre de los integrantes.</p>"
+        "description": "<p>entrega de examen parcial</p>"
       },
       {
-        "title": "Reto 2 - 20112 - Clipping",
-        "start_date": "2011/08/03 03:00 PM",
-        "end_date": "2011/08/09 11:59 PM",
+        "title": "Reto 3 (2011-2): implementación del SADP2P",
+        "start_date": "2011/10/09 10:10 PM",
+        "end_date": "2011/10/10 11:59 PM",
         "status": "Closed",
-        "description": "<p>Para practicar el clipping en 2D:</p>\n<p>1. Definir un área rectangular de clipping y dibujarla en negro.</p>\n<p>2. Generar, aleatoriamente, segmentos de recta que estén contenidos en la ventana. Repetir el proceso hasta que se haya generado (y dibujado):</p>\n<p>* Un segmento que esté completamente dentro del área de clipping</p>\n<p>* Un segmento que esté completamente fuera del área de clipping</p>\n<p>* Un segmento que esté parcialmente adentro y parcialmente afuera del área de clipping</p>\n<p>En todos los casos, dibujar de verde la parte del segmento que esté dentro del área de clipping y en rojo la parte que esté afuera.</p>\n<p>Se pueden usar las primitivas de OpenGL para dibujar líneas.</p>"
+        "description": "<p>Entrega del reto de implementación del SADP2P.</p>\n<p>Aprovechando que ya se les activo el servidor, cada estudiante además de colocar aca el reto, debe generar un directorio \"reto03\" en el cual contenga el proyecto sw del reto y la documentación.</p>"
+      }
+    ]
+
+
+Messages
+---------
+
+### Show
+
+**Sample request:**
+
+`curl localhost:3000/ei/messages/st0263`
+
+**Sample response:**
+
+    [
+      {
+        "subject": "actualizacion del seguimiento",
+        "from": "Edwin Nelson Montoya Munera",
+        "sent_at": "2011/11/11 09:19",
+        "body": "<br><p>Actualice el archivo compartido de las notas, para tengan en cuenta:</p>\n<p>https://docs.google.com/spreadsheet/ccc?key=0Av4oKjh0Qca5dHQ5ZUZ4T1BBRzNDVndYUlZOYTc4d2c&amp;hl=es#gid=0</p>\n<p>a las 10 entro el seguimiento.</p>\n<p>     Edwin</p>\r\n      <br><br>"
+      },
+      {
+        "subject": "Ingreso del seguimiento (40%) y reto5",
+        "from": "Edwin Nelson Montoya Munera",
+        "sent_at": "2011/11/11 08:29",
+        "body": "<br><p>buenos días a todos,</p>\n<p>url de notas: https://docs.google.com/spreadsheet/ccc?key=0Av4oKjh0Qca5dHQ5ZUZ4T1BBRzNDVndYUlZOYTc4d2c&amp;hl=es&amp;pli=1#gid=0</p>\n<p>se confirma los porcentajes programados:</p>\n<p>parcial1 - 15%</p>\n<p>parcial2 - 15%</p>\n<p>seguimiento - 40%</p>\n<p>el seguimiento se discrimina así: 5 retos (c/uno de 6%) y los foros 10% (se promedian).</p>\n<p>Para darles chance que terminen bien el reto5, les coloque una nota promedio de 3.0 a todos, y tendrían HASTA ESTE LUNES FESTIVO EN LA TARDE, PARA SUBIR EL RETO 05 funcionando, y dependiendo de la evaluación, se ratifica esta nota, se sube o baja, y procedería a modificarla.</p>\n<p>Espero que este alargue les de chance de obtener una buena nota en este reto...</p>\n<p>    Edwin Montoya</p>\r\n      <br><br>"
       }
     ]
