@@ -1,5 +1,14 @@
-$(function() {  
-  $("#search_students_form").bind("ajax:before", function() {
-    $(".spinner").slideDown();
-  });
+$(function() {
+  if ($("#messages[data-url]").size() > 0) {
+    $("#messages[data-url]").find(".spinner").slideDown();
+    setTimeout(function(){ $.getScript( $("#messages[data-url]").attr("data-url") ); }, 1);
+  }
+  if ($("#homework[data-url]").size() > 0) {
+    var div = $("#homework[data-url]");
+    div.find(".spinner").slideDown();
+  }
+  if ($("#resources[data-url]").size() > 0) {
+    var div = $("#resources[data-url]");
+    div.find(".spinner").slideDown();
+  }
 });

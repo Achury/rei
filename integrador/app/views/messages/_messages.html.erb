@@ -1,0 +1,22 @@
+<table class="r">
+  <tr>
+    <th class="r"></th>
+    <th class="r">Asunto</th>
+    <th class="r">Remitente</th>
+    <th class="r">Fecha</th>
+  </tr>
+  <% @messages.each_with_index do |message, index| %>
+    <tr class="<%= cycle("odd", "even") %> title" data-message-id="<%= index %>">
+      <td class="r pointer"><%= index < 3 ? "▼" : " ▶" %></td>
+      <td class="r"><b><%= message["subject"] %></b></td>
+      <td class="r"><%= message["from"] %></td>
+      <td class="r">hace <%= time_ago_in_words(Date.parse(message["sent_at"])) %></td>
+    </tr>
+    
+    <tr class="<%= cycle("odd", "even") %> message_<%= index %> <%= index < 3 ? "open" : "collapsed" %>">
+      <td colspan="4" class="r">
+        <%= message["body"].html_safe %>
+      </td>
+    </tr>
+  <% end %>
+</table>

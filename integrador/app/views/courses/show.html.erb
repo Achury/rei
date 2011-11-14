@@ -2,8 +2,6 @@
 
 <div>
   <h2>Calificación</h2>
-  <div><b>Porcentaje evaluado: </b> <%= @grades["graded_percentage"] %></div>
-  
   <table class="r">
     <tr>
       <th class="r">Actividad</th>
@@ -24,45 +22,25 @@
       <td class="r"><b><%= @grades["average_grade"] %></b></td>
     </tr>
   </table>
-  
 </div>
 
-<h2>Contenidos</h2>
-<ul>
-  <% [].each do |mod| %>
-    <li>
-      <b><%= mod["titulo"] %></b>
-      <div>
-        <%= mod["descripcion"] %>
-      </div>
-      <div>
-        <%= link_to "(link)", mod["url"] %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+<div>
+  <h2>Entrega de trabajos</h2>
+  <div id="homework" class="center" data-url="<%= homework_path(:format => :js) %>">
+    <%= image_tag "spinner.gif", :class => "spinner" %>
+  </div>
+</div>
 
+<div>
+  <h2>Contenidos</h2>
+  <div id="resources" class="center" data-url="<%= resource_path(:format => :js) %>">
+    <%= image_tag "spinner.gif", :class => "spinner" %>
+  </div>
+</div>
 
-<h2>Lista de estudiantes</h2>
-
-<%= render "students/students", :collection => @students %>
-
-<h2>Programación semestre <%= current_semester %></h2>
-
-<table class="r">
-  <tr>
-    <th class="r">Actividad</th>
-    <th class="r">Porcentaje</th>
-    <th class="r">Fecha</th>
-    <th class="r"></th>
-  </tr>
-
-  <% [].each do |event| %>
-    <tr class="<%= cycle('odd', 'even') %>">
-      <td class="r"><b><%= event["tipo"].titleize %></b></td>
-      <td class="r"><%= event["porcentaje"] %>%</td>
-      <td class="r"><%= l Date.parse(event["fecha"]) , :format => :long %></td>
-      <td class="r"><%= date_distance(Date.parse(event["fecha"])) %></td>
-    </tr>
-  <% end %>
-</table>
+<div>
+  <h2>Mensajes</h2>
+  <div id="messages" class="center" data-url="<%= message_path(:format => :js) %>">
+    <%= image_tag "spinner.gif", :class => "spinner" %>
+  </div>
+</div>

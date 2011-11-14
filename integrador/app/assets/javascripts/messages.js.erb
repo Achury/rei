@@ -1,0 +1,8 @@
+$(function(){
+  $("#messages tr.title").live("click", function(){
+    var id = $(this).attr("data-message-id");
+    $("#messages tr.message_" + id).toggle();
+    var visible = $("#messages tr.message_" + id).is(":visible");
+    $(this).find(".pointer").html(visible ? "▼" : " ▶");
+  });
+});
