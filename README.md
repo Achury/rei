@@ -152,3 +152,25 @@ Grades
         ]
       }
     ]
+
+Homework
+--------
+
+### Show
+
+    [
+      {
+        "title": "Reto 1 - 20112 - Segmentos de línea",
+        "start_date": "2011/07/27 05:00 PM",
+        "end_date": "2011/08/02 11:59 PM",
+        "status": "Closed",
+        "description": "<p>Grupos de 1 o 2 personas:</p>\n<p>- Implmentar los algoritmos de Bresenham y uno intiutivo (con variables de punto flotante) y dibujar las líneas, dentro de un cuadrado, que circunscriben un círculo.</p>\n<p>Grupos de 3 personas:</p>\n<p>- Implementar, adicionalmente, la ecuación de segmento de recta.</p>\n<p>Entregar:</p>\n<p>1. Archivo texto con los tiempos que toma dibujar 10,000 líneas con cada algoritmo</p>\n<p>2. El código fuente de los algoritmos implementados (solamente el archivo .c o .cpp)</p>\n<p>3. Un pantallazo.</p>\n<p>Meter todo a un archivo .zip o .rar y ponerle el nombre de los integrantes.</p>"
+      },
+      {
+        "title": "Reto 2 - 20112 - Clipping",
+        "start_date": "2011/08/03 03:00 PM",
+        "end_date": "2011/08/09 11:59 PM",
+        "status": "Closed",
+        "description": "<p>Para practicar el clipping en 2D:</p>\n<p>1. Definir un área rectangular de clipping y dibujarla en negro.</p>\n<p>2. Generar, aleatoriamente, segmentos de recta que estén contenidos en la ventana. Repetir el proceso hasta que se haya generado (y dibujado):</p>\n<p>* Un segmento que esté completamente dentro del área de clipping</p>\n<p>* Un segmento que esté completamente fuera del área de clipping</p>\n<p>* Un segmento que esté parcialmente adentro y parcialmente afuera del área de clipping</p>\n<p>En todos los casos, dibujar de verde la parte del segmento que esté dentro del área de clipping y en rojo la parte que esté afuera.</p>\n<p>Se pueden usar las primitivas de OpenGL para dibujar líneas.</p>"
+      }
+    ]

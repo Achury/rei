@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   
   before_filter :require_credentials
   
-  rescue_from AuthenticationException do |exception|
+  rescue_from AuthenticationException, InvalidCourseException do |exception|
     render :json => { :error => exception.message }
   end
-  
+
   protected
   
   def require_credentials

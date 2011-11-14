@@ -3,4 +3,8 @@ Api::Application.routes.draw do
     resource :schedule
     resources :grades
   end
+  
+  namespace :ei do
+    resources :homework
+  end
 end

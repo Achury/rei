@@ -21,7 +21,7 @@ class Interactiva::Homework < Interactiva::Base
       homework[:start_date]  = rows[0].search("td")[1].search("b")[0].text.gsub("Fecha Inicio:", "").strip
       homework[:end_date]    = rows[0].search("td")[1].search("b")[1].text.gsub("Fecha Fin:", "").strip
       homework[:status]      = rows[0].search("td")[1].search("div").text.strip
-      homework[:description] = rows[1].search("td")[0].search("p").text.strip
+      homework[:description] = rows[1].search("td")[0].search("p").to_html.strip
       
       homework[:status].gsub!("CERRADO", "Closed")
       homework[:status].gsub!("ABIERTO", "Open")
