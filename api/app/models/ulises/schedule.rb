@@ -26,8 +26,5 @@ class Ulises::Schedule < Ulises::Base
       course[:campus]      = cells[9].search("td").map { |t| t.text }
       course
     end
-    puts schedule
-    nil
   end
-
 end
