@@ -1,0 +1,50 @@
+<% title "Mis cursos" %>
+
+<table class="r courses">
+  <tr>
+    <th class="r">Código</th>
+    <th class="r name">Nombre</th>
+    <th class="r">Grupo</th>
+    <th class="r">Día</th>
+    <th class="r">Hora</th>
+    <th class="r">Aula</th>
+    <th class="r">Lapso</th>
+  </tr>
+
+  <% @schedule.each do |course| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td class="r"><%= extract_code(course["course"]) %></td>
+      <td class="r"><%= link_to extract_name(course["course"]), course_path(extract_code(course["course"])) %></td>
+      <td class="r"><%= course["group"] %></td>
+      <td class="r">
+        <% course["days"].each do |day| %>
+          <div>
+            <%= format_day(day) %>
+          </div>
+        <% end %>
+      </td>
+      <td class="r">
+        <% course["hours"].each do |hour| %>
+          <div>
+            <%= hour %>
+          </div>
+        <% end %>
+      </td>
+      <td class="r">
+        <% course["rooms"].each do |room| %>
+          <div>
+            <%= room %>
+          </div>
+        <% end %>
+      </td>
+      <td class="r">
+        <% course["start_dates"].each_with_index do |start_date, index| %>
+          <div>
+            De <%= l Date.parse(start_date), :format => "%B %d" %> a
+            <%= l Date.parse(course["end_dates"][index]), :format => "%B %d" %>
+          </div>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

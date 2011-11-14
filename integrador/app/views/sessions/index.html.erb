@@ -1,0 +1,17 @@
+<% title "Sessions" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for session in @sessions %>
+    <tr>
+      <td><%= session.name %></td>
+      <td><%= link_to "Show", session %></td>
+      <td><%= link_to "Edit", edit_session_path(session) %></td>
+      <td><%= link_to "Destroy", session, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Session", new_session_path %></p>

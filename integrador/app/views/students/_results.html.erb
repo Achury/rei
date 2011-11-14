@@ -1,0 +1,5 @@
+<% if @students.empty? %>
+  No hay resultados.
+<% else %>
+  <%= render "students", :collection => @students %>
+<% end %>

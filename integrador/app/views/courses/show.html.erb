@@ -1,0 +1,41 @@
+<% title course_title(@course, params[:group]) %>
+
+<h2>Contenidos</h2>
+<ul>
+  <% @course["modulo"].each do |mod| %>
+    <li>
+      <b><%= mod["titulo"] %></b>
+      <div>
+        <%= mod["descripcion"] %>
+      </div>
+      <div>
+        <%= link_to "(link)", mod["url"] %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+
+<h2>Lista de estudiantes</h2>
+
+<%= render "students/students", :collection => @students %>
+
+<h2>Programación semestre <%= current_semester %></h2>
+
+<table class="r">
+  <tr>
+    <th class="r">Actividad</th>
+    <th class="r">Porcentaje</th>
+    <th class="r">Fecha</th>
+    <th class="r"></th>
+  </tr>
+
+  <% @schedule.each do |event| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td class="r"><b><%= event["tipo"].titleize %></b></td>
+      <td class="r"><%= event["porcentaje"] %>%</td>
+      <td class="r"><%= l Date.parse(event["fecha"]) , :format => :long %></td>
+      <td class="r"><%= date_distance(Date.parse(event["fecha"])) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,14 @@
+<% title "Resultados de la búsqueda" %>
+
+<div id="search_results">
+  <%= render "results" %>
+</div>
+
+<h3>Realizar nueva búsqueda</h3>
+
+<%= form_tag search_students_path, :method => :get do %>
+  <%= label_tag :name_pattern, "Parte del nombre" %>
+  <%= text_field_tag :name_pattern, params[:name_pattern] %>
+  <%= submit_tag "Buscar" %>
+<% end %>
+

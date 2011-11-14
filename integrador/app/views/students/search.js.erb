@@ -1,0 +1,5 @@
+$("#search_results").fadeOut(function() {
+  $(this).html("<%= escape_javascript render("results") %>").fadeIn(function(){
+    $(".spinner").slideUp();
+  });
+});

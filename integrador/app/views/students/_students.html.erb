@@ -1,0 +1,13 @@
+<table class="r">
+  <tr>
+    <th class="r">Código</th>
+    <th class="r">Nombre</th>
+  </tr>
+
+  <% @students.sort_by { |s| s["nombre"] }.each do |student| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td class="r"><%= link_to student["codigo"], student_path(student["codigo"]) %></td>
+      <td class="r"><%= student["nombre"] %></td>
+    </tr>
+  <% end %>
+</table>

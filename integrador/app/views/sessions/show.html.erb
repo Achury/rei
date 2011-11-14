@@ -1,0 +1,12 @@
+<% title "Session" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @session.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_session_path(@session) %> |
+  <%= link_to "Destroy", @session, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sessions_path %>
+</p>
