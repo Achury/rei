@@ -4,11 +4,11 @@ $(function() {
     setTimeout(function(){ $.getScript( $("#messages[data-url]").attr("data-url") ); }, 1);
   }
   if ($("#homework[data-url]").size() > 0) {
-    var div = $("#homework[data-url]");
-    div.find(".spinner").slideDown();
+    $("#homework[data-url]").find(".spinner").slideDown();
+    setTimeout(function(){ $.getScript( $("#homework[data-url]").attr("data-url") ); }, 1);
   }
   if ($("#resources[data-url]").size() > 0) {
-    var div = $("#resources[data-url]");
-    div.find(".spinner").slideDown();
+    $("#resources[data-url]").find(".spinner").slideDown();
+    setTimeout(function(){ $.getScript( $("#resources[data-url]").attr("data-url") ); }, 1);
   }
 });

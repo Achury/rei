@@ -1,0 +1,22 @@
+<table class="r">
+  <tr>
+    <th class="r"></th>
+    <th class="r">Título</th>
+    <th class="r">Lapso</th>
+    <th class="r">Estado</th>
+  </tr>
+  <% @homework.each_with_index do |homework, index| %>
+    <tr class="<%= cycle("odd", "even") %> title" data-homework-id="<%= index %>">
+      <td class="r pointer"><%= index < 0 ? "▼" : " ▶" %></td>
+      <td class="r"><b><%= homework["title"] %></b></td>
+      <td class="r">Desde el <%= l Time.parse(homework["start_date"]), :format => :long %> hasta el <%= l Time.parse(homework["end_date"]), :format => :long %></td>
+      <td class="r"><b><%= format_status homework["status"] %></b></td>
+    </tr>
+    
+    <tr class="<%= cycle("odd", "even") %> homework_<%= index %> <%= index < 0 ? "open" : "collapsed" %>">
+      <td colspan="4" class="r">
+        <%= homework["description"].html_safe %>
+      </td>
+    </tr>
+  <% end %>
+</table>

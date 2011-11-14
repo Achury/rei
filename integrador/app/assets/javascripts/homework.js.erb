@@ -1,0 +1,8 @@
+$(function(){
+  $("#homework tr.title").live("click", function(){
+    var id = $(this).attr("data-homework-id");
+    $("#homework tr.homework_" + id).toggle();
+    var visible = $("#homework tr.homework_" + id).is(":visible");
+    $(this).find(".pointer").html(visible ? "▼" : " ▶");
+  });
+});
