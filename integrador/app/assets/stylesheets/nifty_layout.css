@@ -127,6 +127,11 @@ table tr.even {
   background-color: #f0f0f0;
 }
 
+table tr.dark {
+  color: inherit;
+  background-color: #e8e8e8;
+}
+
 table tr.highlight {
   color: inherit;
   background-color: #ccffbb;

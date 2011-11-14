@@ -1,8 +1,35 @@
-<% title course_title(@course, params[:group]) %>
+<% title "#{extract_code(@grades["course"])} - #{extract_name(@grades["course"])}" %>
+
+<div>
+  <h2>Calificación</h2>
+  <div><b>Porcentaje evaluado: </b> <%= @grades["graded_percentage"] %></div>
+  
+  <table class="r">
+    <tr>
+      <th class="r">Actividad</th>
+      <th class="r">Porcentaje</th>
+      <th class="r">Calificación obtenida</th>
+    </tr>
+
+    <% @grades["grades"].each do |grade| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td class="r"><%= grade["assignment"] %></td>
+        <td class="r"><%= grade["percentage"] %>%</td>
+        <td class="r"><%= grade["grade"] %></td>
+      </tr>
+    <% end %>
+    <tr class="dark">
+      <td class="r"></td>
+      <td class="r"><b><%= @grades["graded_percentage"] %>%</b></td>
+      <td class="r"><b><%= @grades["average_grade"] %></b></td>
+    </tr>
+  </table>
+  
+</div>
 
 <h2>Contenidos</h2>
 <ul>
-  <% @course["modulo"].each do |mod| %>
+  <% [].each do |mod| %>
     <li>
       <b><%= mod["titulo"] %></b>
       <div>
@@ -30,7 +57,7 @@
     <th class="r"></th>
   </tr>
 
-  <% @schedule.each do |event| %>
+  <% [].each do |event| %>
     <tr class="<%= cycle('odd', 'even') %>">
       <td class="r"><b><%= event["tipo"].titleize %></b></td>
       <td class="r"><%= event["porcentaje"] %>%</td>
