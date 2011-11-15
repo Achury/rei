@@ -11,7 +11,7 @@ class Ulises::Base
       login_form.login = username
       login_form.clave = password
       page = agent.submit(login_form, login_form.buttons.first)
-      if page.root.text =~ /Bienvenido/
+      if page.root.text =~ /Bienvenido/ or page.root.to_html =~ /\/ulises\/consultas\/index.do/i
         agent
       else
         raise AuthenticationException.new("Invalid username or password")
