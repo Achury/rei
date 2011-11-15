@@ -30,6 +30,9 @@ class Interactiva::Messages < Interactiva::Base
   def self.extract_message(page)
     table = page.search("table.tablacontenidos")
     rows = table.search("./tr")
+    rows.search("a").each do |a|
+      a["href"] = DOMAIN + a["href"] unless a["href"].starts_with?(/http(s)+:\/\//)
+    end
     rows[4].search("td").children.to_html.strip
   end
 end

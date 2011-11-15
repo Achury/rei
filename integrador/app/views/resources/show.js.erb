@@ -1,1 +1,3 @@
-$("#resources").html("<%= escape_javascript render("resources", :resources => @resources) %>");
+var div = $("<div class='light'></div>");
+$(div).html("<%= escape_javascript render("resources", :resources => @resources) %>");
+$("#resources").html(div);

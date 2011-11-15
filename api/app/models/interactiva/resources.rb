@@ -28,10 +28,20 @@ class Interactiva::Resources < Interactiva::Base
         resource = {}
         resource[:title] = cell.search("span.titulo").text.strip
         resource[:description] = cell.search("p").first.text.strip if cell.search("p").first
-        resource[:content] = cell.search("a").map { |link| { :text => link.text.strip, :url => link.attr("href") } }
+        resource[:content] = extract_links(cell)
         resource[:leaf] = true
         resource
       end
+    end
+  end
+  
+  def self.extract_links(node)
+    node.search("a").map do |link|
+      hash = {}
+      hash[:text] = link.text.strip
+      hash[:url] = link.attr("href")
+      hash[:url] = DOMAIN + hash[:url] unless hash[:url].starts_with?(/http(s)+:\/\//)
+      hash
     end
   end
 end
