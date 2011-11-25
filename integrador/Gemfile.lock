@@ -86,6 +86,8 @@ GEM
       railties (= 3.1.1)
     rails-i18n (0.1.10)
       i18n (~> 0.5)
+    rails_autolink (1.0.4)
+      rails (>= 3.1.0)
     railties (3.1.1)
       actionpack (= 3.1.1)
       activesupport (= 3.1.1)
@@ -138,6 +140,7 @@ DEPENDENCIES
   nifty-generators
   rails (= 3.1.1)
   rails-i18n
+  rails_autolink
   sass-rails (~> 3.1.0)
   therubyracer
   thin

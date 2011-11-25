@@ -15,7 +15,7 @@
     
     <tr class="<%= cycle("odd", "even") %> message_<%= index %> <%= index < 0 ? "open" : "collapsed" %>">
       <td colspan="4" class="r">
-        <%= message["body"].html_safe %>
+        <%= auto_link message["body"].html_safe %>
       </td>
     </tr>
   <% end %>
