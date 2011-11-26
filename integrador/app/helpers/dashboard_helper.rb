@@ -5,7 +5,7 @@ module DashboardHelper
   end
   
   def extract_name(some_course)
-    UnicodeUtils.downcase(some_course.split("-").second.strip).humanize
+    UnicodeUtils.downcase(some_course.split("-")[1..-1].join("-").strip).humanize
   end
   
   def format_day(day)
